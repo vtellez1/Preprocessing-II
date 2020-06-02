@@ -1,1 +1,53 @@
 // Navigation Styles here
+
+.nav{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1.5% 0%;
+    border-bottom: 3px dashed #DCDCDC;
+    display: flex;
+    justify-content: space-between;
+
+    @media @mobile{
+        flex-direction: column;
+        max-width: 470px;
+        align-items: center;
+    }//End of big container for nav
+
+    .TitleCorner{
+        text-align: center;
+        width: 25%;
+
+        @media @mobile{
+        width: 100%;
+        padding: 2% 0%;
+        }//End of media container for title
+
+        h1{
+            @media @mobile{
+                font-size: 3rem;
+            }
+        }
+    }//End of Title Corner
+
+    .links{
+        .flexbox(center, flex-end);
+        width: 50%;
+
+        @media @mobile{
+            width:100%;
+        }//End of links media
+        a{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            width: 20%;
+            font-size: 1.6rem;
+
+            &:hover{
+                color: lighten(black, 70%);
+            }
+        }//End of a hrefs
+    }//End of links
+}//End of Nav

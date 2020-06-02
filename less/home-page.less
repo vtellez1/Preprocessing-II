@@ -1,4 +1,14 @@
 .home {
+  .MainHeader{
+    border-bottom:  3px dashed #DCDCDC;
+    display: flex;
+    flex-direction: column;
+
+    .HeaderContent{
+      padding: 1.7% 0%;
+    }//End of Header Content
+  }//End of Main Header
+
 
   .content-section {
     margin: 30px 0;
@@ -6,46 +16,80 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile{
+      flex-direction: column;
+      align-content: center;
+      width: 100%;
+    }//End of Content-section Mobile
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+
+      @media @mobile{
+        width: 100%;
+      }//End of Text-Content Media
+    }//End of Text Content
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width: 100%;
+      }//End of Img Content Mobile Media
+
       img {
         border-radius: 10px;
-      }
-    }
-  }
+
+        @media @mobile{
+        width: 100%;
+      }//End of img in Img Content Mobile Media
+      }//End of img
+    }//End of img content
+  }//End of Content Section
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile{
+      display: flex;
+      flex-direction: column-reverse;
+    }//End of Inverse Content Mobile media
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    }//End of Text Content
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-    }
-  }
+
+        img{
+      @media @mobile{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        }//End of Media Mobile for img
+      }//End of img in img-content
+    }//End of img Content
+  }//End of Inverse Content
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile{
+      width:100%;
+    }//end of content-destination media mobile
     img {
       border-radius: 10px;
-    }
-  }
+    }//End of img
+  }//End of Content Destination
 
   .content-pick {
     padding-top: 30px;
@@ -53,9 +97,35 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile{
+      flex-direction: column;
+      align-items: center;
+    }//end of content-pick media mobile
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
+
+      @media @mobile{
+        width: 78%;
+      }//End of destination media mobile
+
+      .btn{
+        .button(#008080, 75%, white);
+        .flexbox(center, center);
+        font-size: 1.8rem;
+        height: 3.7rem;
+        border-radius: 1.3rem;
+
+        &:hover{
+          color: lighten(yellow, 20%);
+      }
+
+        @media @mobile{
+          .button(#19a8ba, 100%, white);
+          height: 3.8rem;
+        }//End of btn media mobile
+      }//end of btn
+    }//End of Destination
+  }//End of Content-pick
 }// home

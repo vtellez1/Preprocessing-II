@@ -1,1 +1,13 @@
 // Mixins in here
+
+.button(@bg-color, @width, @txtcolor){
+    background-color: @bg-color;
+    width: @width;
+    color: @txtcolor;
+}
+
+.flexbox(@justify, @aligncontent){
+    display: flex;
+    justify-content: @justify;
+    align-items: @aligncontent;
+}
